@@ -267,8 +267,8 @@ class Geom extends Base {
     let max = scale.max;
     for (let i = 0, len = mergeArray.length; i < len; i++) {
       const obj = mergeArray[i];
-      const tmpMin = Math.min.apply(null, obj[field]);
-      const tmpMax = Math.max.apply(null, obj[field]);
+      const tmpMin = Math.min.apply(null, [obj[field]]);
+      const tmpMax = Math.max.apply(null, [obj[field]]);
       if (tmpMin < min) {
         min = tmpMin;
       }
